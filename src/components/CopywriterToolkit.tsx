@@ -34,7 +34,7 @@ export default function CopywriterToolkit() {
           </p>
         </div>
         <div className="flex items-center gap-2">
-          <span className="px-2.5 py-1 bg-slate-900 text-slate-350 font-mono text-[10px] rounded border border-slate-800">
+          <span className="px-2.5 py-1 bg-slate-900 text-slate-400 font-mono text-[10px] rounded border border-slate-800">
             dr7ai.com
           </span>
         </div>
@@ -57,8 +57,8 @@ export default function CopywriterToolkit() {
               onClick={() => setActiveTab(tab.id as any)}
               className={`flex items-center gap-2 px-5 py-4 text-xs font-semibold border-b-2 whitespace-nowrap transition cursor-pointer ${
                 isActive
-                  ? 'border-blue-500 text-white bg-slate-850/60'
-                  : 'border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-850/20'
+                  ? 'border-blue-500 text-white bg-slate-800/60'
+                  : 'border-transparent text-slate-400 hover:text-slate-200 hover:bg-slate-800/20'
               }`}
             >
               <Icon className="w-4 h-4 shrink-0" />
@@ -99,7 +99,7 @@ export default function CopywriterToolkit() {
                   {copiedId === 'metadesc' ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                 </button>
                 <span className="text-[10px] font-bold text-blue-400 font-mono block mb-1">META DESCRIPTION (Max 160 caratteri)</span>
-                <p className="text-xs text-slate-350 pr-8 leading-relaxed">{SEO_DATA.metaDescription}</p>
+                <p className="text-xs text-slate-400 pr-8 leading-relaxed">{SEO_DATA.metaDescription}</p>
               </div>
 
             </div>
@@ -121,7 +121,7 @@ export default function CopywriterToolkit() {
               </div>
               <div className="flex flex-wrap gap-2">
                 {SEO_DATA.keywords.map((kw, i) => (
-                  <span key={i} className="px-2.5 py-1 bg-slate-900 text-slate-300 font-mono text-[11px] rounded border border-slate-850">
+                  <span key={i} className="px-2.5 py-1 bg-slate-900 text-slate-300 font-mono text-[11px] rounded border border-slate-800">
                     {kw}
                   </span>
                 ))}
@@ -129,12 +129,12 @@ export default function CopywriterToolkit() {
             </div>
 
             {/* Headers structure */}
-            <div className="bg-slate-950 p-4 rounded-xl border border-slate-850 space-y-3">
+            <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 space-y-3">
               <span className="text-[10px] font-bold text-blue-400 font-mono block">STRUTTURA DEI TITOLI H1 / H2 AGGIORNATA</span>
               
               <div className="space-y-1.5">
                 <p className="text-xs text-slate-500 font-mono">[H1] Titolo Principale</p>
-                <div className="p-2.5 bg-slate-900 rounded border border-slate-850 text-xs font-semibold text-white">
+                <div className="p-2.5 bg-slate-900 rounded border border-slate-800 text-xs font-semibold text-white">
                   {SEO_DATA.h1}
                 </div>
               </div>
@@ -143,7 +143,7 @@ export default function CopywriterToolkit() {
                 <p className="text-xs text-slate-500 font-mono">[H2] Struttura del Catalogo Sezioni</p>
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
                   {SEO_DATA.h2s.map((h2, idx) => (
-                    <div key={idx} className="p-2 bg-slate-900/60 rounded text-[11px] text-slate-355 border border-slate-850 font-sans">
+                    <div key={idx} className="p-2 bg-slate-900/60 rounded text-[11px] text-slate-355 border border-slate-800 font-sans">
                       {idx + 1}. {h2}
                     </div>
                   ))}
@@ -211,7 +211,7 @@ export default function CopywriterToolkit() {
                       </div>
                       <div className="pt-2">
                         <span className="text-slate-500 font-mono block mb-0.5">[Descrizione]</span>
-                        <p className="text-slate-350 pr-8 line-clamp-3">{ad.description}</p>
+                        <p className="text-slate-400 pr-8 line-clamp-3">{ad.description}</p>
                       </div>
                     </div>
                   </div>
@@ -256,7 +256,7 @@ export default function CopywriterToolkit() {
                 <div key={index} className="bg-slate-950 p-4 rounded-xl border border-slate-800 flex flex-col justify-between relative text-left">
                   <button
                     onClick={() => handleCopy(`[${sc.title}]\nTempo: ${sc.hook}\nScena: ${sc.action}\nVoce Fuori Campo: ${sc.voiceover}`, `vid_${index}`)}
-                    className="absolute top-4 right-4 text-slate-500 hover:text-white p-1.5 bg-slate-900 rounded border border-slate-850 transition cursor-pointer"
+                    className="absolute top-4 right-4 text-slate-500 hover:text-white p-1.5 bg-slate-900 rounded border border-slate-800 transition cursor-pointer"
                   >
                     {copiedId === `vid_${index}` ? <Check className="w-3.5 h-3.5 text-emerald-400" /> : <Copy className="w-3.5 h-3.5" />}
                   </button>
@@ -289,7 +289,7 @@ export default function CopywriterToolkit() {
       {/* Toolkit Footer */}
       <div className="bg-slate-950 px-6 py-4 border-t border-slate-800 text-xs text-slate-500 flex justify-between items-center font-mono">
         <span>© DR7 AI Copywriting Engine v1.0</span>
-        <span className="text-slate-350 select-all">dr7ai.com</span>
+        <span className="text-slate-400 select-all">dr7ai.com</span>
       </div>
     </div>
   );

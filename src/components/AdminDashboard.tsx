@@ -699,7 +699,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
 
         {/* 2. SIDEBAR PROFILE CARD BLOCK - Formed specifically after Ophélie's Super Admin design */}
         <div className="p-4 border-t border-slate-900 bg-[#080B14] space-y-4">
-          <div className="bg-[#0f1424] rounded-2xl p-3.5 border border-slate-850 space-y-3 shadow-md text-left">
+          <div className="bg-[#0f1424] rounded-2xl p-3.5 border border-slate-800 space-y-3 shadow-md text-left">
             
             {/* Ophelie Row */}
             <div className="flex items-center gap-3">
@@ -717,7 +717,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
             {sidebarOpen && (
               <div className="space-y-2.5 pt-1.5 border-t border-slate-800/85">
                 {/* Attiva Allarmi Toggle */}
-                <div className="flex items-center justify-between text-[11px] text-slate-350">
+                <div className="flex items-center justify-between text-[11px] text-slate-400">
                   <span className="flex items-center gap-1.5">
                     <Bell className={`w-3.5 h-3.5 ${alarmsEnabled ? 'text-cyan-400 animate-pulse' : 'text-slate-500'}`} />
                     Attiva Allarmi
@@ -735,7 +735,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                 {/* I miei orari Button */}
                 <button
                   onClick={() => setShowHoursModal(true)}
-                  className="w-full text-left py-1.5 px-2.5 bg-slate-900 hover:bg-slate-850 rounded-lg text-[10px] text-slate-300 hover:text-white transition-colors flex items-center gap-2 border border-slate-800"
+                  className="w-full text-left py-1.5 px-2.5 bg-slate-900 hover:bg-slate-800 rounded-lg text-[10px] text-slate-300 hover:text-white transition-colors flex items-center gap-2 border border-slate-800"
                 >
                   <Clock className="w-3.5 h-3.5 text-cyan-400" />
                   <span>I miei orari</span>
@@ -767,7 +767,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                 <button 
                   onClick={toggleAlarms} 
                   title={alarmsEnabled ? "Disattiva Allarmi" : "Attiva Allarmi"}
-                  className={`p-1.5 rounded-lg ${alarmsEnabled ? 'bg-cyan-500/15 text-cyan-400' : 'bg-slate-850 text-slate-500'}`}
+                  className={`p-1.5 rounded-lg ${alarmsEnabled ? 'bg-cyan-500/15 text-cyan-400' : 'bg-slate-800 text-slate-500'}`}
                 >
                   <Bell className="w-3.5 h-3.5" />
                 </button>
@@ -864,7 +864,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
               }}
               className={`p-2 rounded-xl border transition duration-200 cursor-pointer ${
                 isDark 
-                  ? 'bg-slate-900 border-slate-800 text-amber-400 hover:bg-slate-850 hover:text-amber-300 shadow-inner' 
+                  ? 'bg-slate-900 border-slate-800 text-amber-400 hover:bg-slate-800 hover:text-amber-300 shadow-inner' 
                   : 'bg-slate-100 border-slate-200 text-indigo-600 hover:bg-slate-200 shadow-sm'
               }`}
               title={isDark ? "Passa a Modalità Chiara" : "Passa a Modalità Scura"}
@@ -877,7 +877,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
               onClick={handleResetToDemo}
               className={`text-[10px] font-mono font-bold px-2.5 py-1.8 rounded-xl border transition flex items-center gap-1.5 ${
                 isDark 
-                  ? 'bg-slate-900 hover:bg-slate-850 text-slate-400 hover:text-white border-slate-800' 
+                  ? 'bg-slate-900 hover:bg-slate-800 text-slate-400 hover:text-white border-slate-800' 
                   : 'bg-slate-100 hover:bg-slate-200 text-slate-600 hover:text-slate-900 border-slate-200'
               }`}
               title="Azzera e ripristina la demo"
@@ -908,7 +908,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
             <div className="bg-[#0A0D18] p-4.5 rounded-2xl border border-slate-900 text-left">
               <span className="text-[9px] font-bold text-slate-500 uppercase tracking-wider font-mono">OCCUPAZIONE PARCO MEZZI</span>
               <p className="text-xl md:text-2xl font-black font-mono text-cyan-400 mt-0.5">{occupancyPercentage}%</p>
-              <div className="w-full bg-slate-850 h-1 rounded-full mt-1.5 overflow-hidden">
+              <div className="w-full bg-slate-800 h-1 rounded-full mt-1.5 overflow-hidden">
                 <div className="bg-cyan-500 h-full rounded-full" style={{ width: `${occupancyPercentage}%` }} />
               </div>
             </div>
@@ -1048,7 +1048,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                           value={searchQuery}
                           onChange={(e) => setSearchQuery(e.target.value)}
                           className={`w-full pl-9 pr-4 py-2 border text-xs rounded-xl outline-none focus:ring-1 focus:ring-cyan-500 ${
-                            isDark ? 'bg-slate-950 border-slate-850 text-white' : 'bg-slate-50 border-slate-200 text-slate-800'
+                            isDark ? 'bg-slate-950 border-slate-800 text-white' : 'bg-slate-50 border-slate-200 text-slate-800'
                           }`}
                         />
                       </div>
@@ -1061,7 +1061,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                             onClick={() => setSelectedQuotationStatus(st)}
                             className={`px-3 py-1.5 rounded-lg transition-all capitalize whitespace-nowrap cursor-pointer ${
                               selectedQuotationStatus === st
-                                ? (isDark ? 'bg-slate-850 text-white' : 'bg-white text-slate-950 shadow-sm')
+                                ? (isDark ? 'bg-slate-800 text-white' : 'bg-white text-slate-950 shadow-sm')
                                 : 'text-slate-450 hover:text-slate-800 dark:hover:text-white'
                             }`}
                           >
@@ -1148,7 +1148,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                                 </td>
                                 <td className="p-4 text-center">
                                   {q.status === 'bozza' && (
-                                    <span className="bg-slate-100 dark:bg-slate-850 text-slate-500 text-[10px] font-bold px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 font-sans tracking-wide">
+                                    <span className="bg-slate-100 dark:bg-slate-800 text-slate-500 text-[10px] font-bold px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-800 font-sans tracking-wide">
                                       Bozza
                                     </span>
                                   )}
@@ -1266,7 +1266,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                                   </span>
                                 )}
                                 {b.status === 'completed' && (
-                                  <span className="bg-slate-200 dark:bg-slate-850 text-slate-450 dark:text-slate-400 text-[9.5px] font-bold px-2.5 py-0.5 rounded-full font-sans">
+                                  <span className="bg-slate-200 dark:bg-slate-800 text-slate-450 dark:text-slate-400 text-[9.5px] font-bold px-2.5 py-0.5 rounded-full font-sans">
                                     Chiuso Completato
                                   </span>
                                 )}
@@ -1343,7 +1343,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                   <p className="text-xs text-slate-400">Tutti i contratti generati vengono timbrati digitalmente in cloud e inviati a Trustera per la validazione dell'identità.</p>
                   
                   <div className="space-y-2.5 font-mono text-xs">
-                    <div className="flex justify-between items-center py-2.5 border-b border-slate-850">
+                    <div className="flex justify-between items-center py-2.5 border-b border-slate-800">
                       <div className="flex items-center gap-3">
                         <FileText className="w-4 h-4 text-emerald-400" />
                         <div>
@@ -1353,7 +1353,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                       </div>
                       <span className="text-[10px] uppercase font-bold bg-emerald-500/10 text-emerald-500 px-2 py-0.5 rounded border border-emerald-500/20">Valido</span>
                     </div>
-                    <div className="flex justify-between items-center py-2.5 border-b border-slate-850">
+                    <div className="flex justify-between items-center py-2.5 border-b border-slate-800">
                       <div className="flex items-center gap-3">
                         <FileText className="w-4 h-4 text-emerald-400" />
                         <div>
@@ -1416,7 +1416,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
 
                   <div className="space-y-3">
                     {washTasks.filter(w => w.status === 'Attesa').map(w => (
-                      <div key={w.id} className="p-4 bg-slate-950 border border-slate-850 rounded-xl space-y-3.5 text-left">
+                      <div key={w.id} className="p-4 bg-slate-950 border border-slate-800 rounded-xl space-y-3.5 text-left">
                         <div>
                           <h4 className="text-xs font-bold text-white">{w.vehicleName}</h4>
                           <span className="text-[10px] font-mono text-slate-500 block">Targa: {w.plate} • Tipo: <strong className="text-cyan-400 font-bold">{w.type}</strong></span>
@@ -1457,7 +1457,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                           </div>
                           <span className="text-[10px] font-mono text-slate-500 block">Targa: {w.plate} • Sanificazione attiva</span>
                         </div>
-                        <div className="w-full bg-slate-850 h-1 rounded-full overflow-hidden">
+                        <div className="w-full bg-slate-800 h-1 rounded-full overflow-hidden">
                           <div className="bg-cyan-500 h-full animate-pulse" style={{ width: '65%' }} />
                         </div>
                         <div className="flex justify-end">
@@ -1542,7 +1542,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                         placeholder="es: Ferrari, Lamborghini" 
                         value={newVehicle.brand}
                         onChange={(e) => setNewVehicle({ ...newVehicle, brand: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white" 
+                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white" 
                       />
                     </div>
                     <div>
@@ -1553,7 +1553,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                         placeholder="es: F8 Tributo, Urus" 
                         value={newVehicle.model}
                         onChange={(e) => setNewVehicle({ ...newVehicle, model: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white" 
+                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white" 
                       />
                     </div>
                     <div>
@@ -1564,7 +1564,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                         placeholder="es: DXB-809, EH123ZZ" 
                         value={newVehicle.plate}
                         onChange={(e) => setNewVehicle({ ...newVehicle, plate: e.target.value })}
-                        className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white font-mono uppercase" 
+                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white font-mono uppercase" 
                       />
                     </div>
                     <div>
@@ -1575,7 +1575,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                         min="1"
                         value={newVehicle.costPerDay}
                         onChange={(e) => setNewVehicle({ ...newVehicle, costPerDay: Number(e.target.value) })}
-                        className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white" 
+                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white" 
                       />
                     </div>
                     <div>
@@ -1583,7 +1583,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                       <select 
                         value={newVehicle.deadlineType}
                         onChange={(e) => setNewVehicle({ ...newVehicle, deadlineType: e.target.value as any })}
-                        className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white"
+                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
                       >
                         <option value="Assicurazione">Assicurazione</option>
                         <option value="Bollo">Bollo</option>
@@ -1598,7 +1598,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                         value={newVehicle.upcomingDeadline}
                         onChange={(e) => setNewVehicle({ ...newVehicle, upcomingDeadline: e.target.value })}
                         placeholder="es: 18 Ago 2026"
-                        className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white" 
+                        className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white" 
                       />
                     </div>
                   </div>
@@ -1624,7 +1624,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
               {/* Fleet Vehicles Grid */}
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
                 {vehicles.map(v => (
-                  <div key={v.id} className="bg-[#0A0D18] border border-slate-900 rounded-2xl p-5 space-y-4 flex flex-col justify-between hover:border-slate-850 transition">
+                  <div key={v.id} className="bg-[#0A0D18] border border-slate-900 rounded-2xl p-5 space-y-4 flex flex-col justify-between hover:border-slate-800 transition">
                     <div className="flex justify-between items-start">
                       <div>
                         <span className="text-[10px] uppercase font-bold text-slate-500 font-mono tracking-wider">Flotta Dubai</span>
@@ -1661,7 +1661,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                     {/* Deadline Section */}
                     <div className="flex justify-between items-center text-[11px] bg-slate-900/60 p-2 rounded-lg border border-slate-950">
                       <span className="text-slate-450">{v.deadlineType}:</span>
-                      <span className={`font-mono font-bold ${v.upcomingDeadline === 'Oggi' ? 'text-red-400 animate-pulse' : 'text-slate-350'}`}>
+                      <span className={`font-mono font-bold ${v.upcomingDeadline === 'Oggi' ? 'text-red-400 animate-pulse' : 'text-slate-400'}`}>
                         {v.upcomingDeadline}
                       </span>
                     </div>
@@ -1720,7 +1720,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                   
                   <div className="space-y-3.5 max-h-[500px] overflow-y-auto">
                     {leads.filter(l => l.status === 'pending').map(l => (
-                      <div key={l.id} className="p-4 bg-slate-950 border border-slate-850 rounded-xl space-y-3 hover:border-slate-800 transition">
+                      <div key={l.id} className="p-4 bg-slate-950 border border-slate-800 rounded-xl space-y-3 hover:border-slate-800 transition">
                         <div className="flex justify-between items-start">
                           <div>
                             <strong className="text-xs text-white block">{l.name}</strong>
@@ -1730,7 +1730,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                             Dimensione Flotta: {l.size} vetture
                           </span>
                         </div>
-                        <div className="p-2.5 bg-slate-900/60 rounded-lg text-xs border border-slate-900 text-slate-350 leading-relaxed italic">
+                        <div className="p-2.5 bg-slate-900/60 rounded-lg text-xs border border-slate-900 text-slate-400 leading-relaxed italic">
                           "{l.painPoint === 'prospects_dispersion' && 'Dati di flotta e contratti sparsi tra carte e file excel'}"
                           "{l.painPoint === 'oublis_relances' && 'Difficoltà a coordinare ricarichi, lavaggi e rientri auto'}"
                           "{l.painPoint === 'manque_visibilite' && 'Mancanza di statistiche di rendimento e flussi di cassa'}"
@@ -1749,7 +1749,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                           </button>
                           <button
                             onClick={() => handleArchiveLead(l.id)}
-                            className="bg-slate-900 hover:bg-slate-850 hover:text-white text-slate-400 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer"
+                            className="bg-slate-900 hover:bg-slate-800 hover:text-white text-slate-400 px-3 py-1.5 rounded-lg border border-slate-800 cursor-pointer"
                           >
                             Contattato & Archivia
                           </button>
@@ -1758,7 +1758,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                     ))}
 
                     {leads.filter(l => l.status === 'pending').length === 0 && (
-                      <div className="text-center py-10 border border-dashed border-slate-850 rounded-xl">
+                      <div className="text-center py-10 border border-dashed border-slate-800 rounded-xl">
                         <p className="text-slate-600 text-xs font-mono">Nessun lead attivo da ricontattare.</p>
                         <p className="text-[10px] text-slate-500 mt-1 max-w-sm mx-auto leading-relaxed">
                           Tutte le pendenze di lead captcha sono state processate o convertite legalmente su dr7ai.com.
@@ -1772,12 +1772,12 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                 <div className="md:col-span-4 bg-[#0A0D18] border border-slate-900 rounded-2xl p-5 space-y-4">
                   <h4 className="text-sm font-bold text-white">VIP Luxury Club Members</h4>
                   <div className="space-y-3.5">
-                    <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-xs space-y-1.5">
+                    <div className="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs space-y-1.5">
                       <span className="text-[9px] font-bold text-[#00C884] uppercase font-mono">FASCIA SUPREME VIP</span>
                       <p className="font-bold text-white">S. Sherif Al Maktoum</p>
                       <p className="text-[10px] text-slate-400 line-clamp-2">Predilige vetture Giallo carbonio (Lamborghini), richiede autista personale NCC bilingue.</p>
                     </div>
-                    <div className="p-3 bg-slate-950 border border-slate-850 rounded-xl text-xs space-y-1.5">
+                    <div className="p-3 bg-slate-950 border border-slate-800 rounded-xl text-xs space-y-1.5">
                       <span className="text-[9px] font-bold text-[#00C884] uppercase font-mono">CLIENTE REGOLARE NCC</span>
                       <p className="font-bold text-white">Emirates Travel Services</p>
                       <p className="text-[10px] text-slate-400">Pianifica 3 furgoni Classe V Mercedes a settimana, fatturazione differita fine mese SDI.</p>
@@ -1803,7 +1803,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                     Campagne Promozionali Supercar
                   </h4>
                   <div className="space-y-3">
-                    <div className="p-4 bg-slate-950 border border-slate-850 rounded-xl space-y-2">
+                    <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl space-y-2">
                       <div className="flex justify-between items-center text-[11px] font-bold text-indigo-400 uppercase font-mono">
                         <span>Weekend Supercar Luxury</span>
                         <span>Frenesia 15% sconto</span>
@@ -1824,7 +1824,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                 <div className="bg-[#0A0D18] p-5 rounded-2xl border border-slate-900 text-left space-y-4">
                   <h4 className="text-sm font-bold text-white">Statistiche Tasso Conversione</h4>
                   <div className="space-y-4">
-                    <div className="bg-slate-950 p-4.5 rounded-xl border border-slate-850">
+                    <div className="bg-slate-950 p-4.5 rounded-xl border border-slate-800">
                       <span className="text-[10px] uppercase font-bold text-slate-500 block font-mono">Click rate medio campagna</span>
                       <strong className="text-2xl font-black font-mono text-white mt-1 block">42.4 %</strong>
                       <div className="w-full bg-slate-900 h-1 mt-2.5 rounded-full overflow-hidden">
@@ -1884,11 +1884,11 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                 <div className="bg-[#0A0D18] p-5 rounded-2xl border border-slate-900 space-y-4">
                   <h4 className="text-sm font-bold text-white">Massimi Fatturatori per Veicolo</h4>
                   <div className="space-y-2.5 text-xs">
-                    <div className="flex justify-between items-center p-3.5 bg-slate-950 border border-slate-850 rounded-xl">
+                    <div className="flex justify-between items-center p-3.5 bg-slate-950 border border-slate-800 rounded-xl">
                       <strong>Ferrari F8 Tributo</strong>
                       <span className="font-mono text-[#00C884] font-bold font-mono text-right">€ 28.300 / mese</span>
                     </div>
-                    <div className="flex justify-between items-center p-3.5 bg-slate-950 border border-slate-850 rounded-xl">
+                    <div className="flex justify-between items-center p-3.5 bg-slate-950 border border-slate-800 rounded-xl">
                       <strong>Rolls-Royce Ghost Series II</strong>
                       <span className="font-mono text-[#00C884] font-bold font-mono text-right">€ 18.500 / mese</span>
                     </div>
@@ -1914,14 +1914,14 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                     Fatture Elettroniche in Coda SDI
                   </h4>
                   <div className="space-y-3 Text-xs text-left">
-                    <div className="p-3.5 bg-slate-950 border border-slate-850 rounded-xl flex items-center justify-between">
+                    <div className="p-3.5 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-between">
                       <div>
                         <p className="font-bold text-white">Fattura Elettronica #F-1029</p>
                         <p className="text-[10px] text-slate-500 font-mono">Emirates Travel srl • SDI: 128YUJ • Conforme</p>
                       </div>
                       <span className="text-[10px] font-mono bg-emerald-950 text-[#00C884] px-2 py-0.5 rounded font-bold">✓ TRASMESSA</span>
                     </div>
-                    <div className="p-3.5 bg-slate-950 border border-slate-850 rounded-xl flex items-center justify-between">
+                    <div className="p-3.5 bg-slate-950 border border-slate-800 rounded-xl flex items-center justify-between">
                       <div>
                         <p className="font-bold text-white">Fattura Elettronica #F-1030</p>
                         <p className="text-[10px] text-slate-500 font-mono">Klaus G. • ID: #W902JJ • Generato OTP SMS</p>
@@ -1972,7 +1972,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                   </h4>
 
                   <div className="space-y-3">
-                    <div className="p-4 bg-slate-950 border border-slate-850 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3.5">
+                    <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3.5">
                       <div className="text-left">
                         <strong className="text-xs text-white block">Mercedes-AMG G63 V8 (Targa: DXB-701)</strong>
                         <p className="text-[10.5px] text-slate-500 font-mono mt-0.5">Velocità: <span className="text-[#00C884] font-bold">112 km/h</span> • Giri Motore: 2,400 rpm • Lat: 45.464 • Lon: 9.190 (Milano Centro)</p>
@@ -1988,7 +1988,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                       </div>
                     </div>
 
-                    <div className="p-4 bg-slate-950 border border-slate-850 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3.5">
+                    <div className="p-4 bg-slate-950 border border-slate-800 rounded-xl flex flex-col sm:flex-row justify-between items-start sm:items-center gap-3.5">
                       <div className="text-left">
                         <strong className="text-xs text-white block">Rolls-Royce Ghost Series II (Targa: DXB-705)</strong>
                         <p className="text-[10.5px] text-slate-500 font-mono mt-0.5">Velocità: <span className="text-amber-500 font-bold">Stazionario (Motore Acceso)</span> • Carburante: 60% • Località: Malpensa Terminal 1</p>
@@ -2012,7 +2012,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                       <span className="text-slate-450">Crittografia Local:</span>
                       <strong className="text-[#00C884]">AES-256 AES Sec</strong>
                     </div>
-                    <p className="text-[10px] text-slate-500 leading-relaxed pt-2 border-t border-slate-850">
+                    <p className="text-[10px] text-slate-500 leading-relaxed pt-2 border-t border-slate-800">
                       Tutte le auto di lusso dispongono di localizzazione satellitare integrata con la centrale allarmi Dubai Rent 7.
                     </p>
                   </div>
@@ -2033,11 +2033,11 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                 <div className="bg-[#0A0D18] p-5 rounded-2xl border border-slate-900 space-y-3.5">
                   <h4 className="text-sm font-bold text-white">Stato Server del Portale</h4>
                   <div className="space-y-2 text-xs">
-                    <div className="flex justify-between p-3 bg-slate-950 rounded-xl border border-slate-850">
+                    <div className="flex justify-between p-3 bg-slate-950 rounded-xl border border-slate-800">
                       <span className="text-slate-400">Dominio registrato:</span>
                       <strong className="text-white">dr7ai.com (SSL Attivo)</strong>
                     </div>
-                    <div className="flex justify-between p-3 bg-slate-950 rounded-xl border border-slate-850">
+                    <div className="flex justify-between p-3 bg-slate-950 rounded-xl border border-slate-800">
                       <span className="text-slate-400">Server Status:</span>
                       <strong className="text-[#00C884]">OPERATIVO (100% Uptime)</strong>
                     </div>
@@ -2066,7 +2066,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
               </div>
 
               <div className="bg-[#0A0D18] border border-slate-900 rounded-2xl overflow-hidden text-xs">
-                <div className="p-4 bg-slate-950 font-bold text-slate-350 border-b border-slate-900 uppercase font-mono">
+                <div className="p-4 bg-slate-950 font-bold text-slate-400 border-b border-slate-900 uppercase font-mono">
                   Documenti Conducente sottomessi per l'Approvazione
                 </div>
                 <div className="divide-y divide-slate-900 text-left">
@@ -2127,7 +2127,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                     <div key={ep.id} className="py-4.5 flex items-center justify-between gap-4">
                       <div>
                         <strong className="text-sm text-slate-200">{ep.vehicleName}</strong>
-                        <p className="text-[10.5px] text-slate-500 font-mono mt-0.5">Targa: {ep.plate} • Destinazione: <strong className="text-slate-350">{ep.destinationCountry}</strong></p>
+                        <p className="text-[10.5px] text-slate-500 font-mono mt-0.5">Targa: {ep.plate} • Destinazione: <strong className="text-slate-400">{ep.destinationCountry}</strong></p>
                       </div>
 
                       <div className="flex items-center gap-3">
@@ -2171,7 +2171,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
               Invia messaggi personalizzati compilati su misura per far avanzare il cliente di <strong className="text-slate-300">{selectedLead.company}</strong> ({selectedLead.phone}).
             </p>
 
-            <div className="bg-slate-950 p-4 rounded-xl border border-slate-850 text-xs text-slate-300 space-y-2.5 leading-relaxed">
+            <div className="bg-slate-950 p-4 rounded-xl border border-slate-800 text-xs text-slate-300 space-y-2.5 leading-relaxed">
               <p className="font-mono text-[9px] font-bold text-cyan-400 tracking-wider">SMS / WHATSAPP PROPOSTA AUTOMATICA:</p>
               <p className="font-light italic">
                 "Gentile {selectedLead.name}, ho esaminato la sottomissione di {selectedLead.company} su dr7ai.com. Ho visto che riscontrate ostacoli stringenti con la fatturazione SDI e le scadenze manuali dei veicoli. Vogliamo personalizzare una video demo di 10 minuti per ridurre i tempi amministrativi della tua flotta?"
@@ -2181,7 +2181,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
             <div className="flex gap-2.5 justify-end pt-2">
               <button
                 onClick={() => setShowContactModal(false)}
-                className="px-4 py-2 bg-slate-900 hover:bg-slate-850 border border-slate-800 text-slate-400 hover:text-white rounded-xl text-xs"
+                className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 hover:text-white rounded-xl text-xs"
               >
                 Annulla
               </button>
@@ -2240,7 +2240,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                       dailyRate: matched ? matched.costPerDay : 400
                     });
                   }}
-                  className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
                 >
                   <option value="">Seleziona...</option>
                   {vehicles.filter(v => v.status === 'available').map(v => (
@@ -2257,7 +2257,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                   placeholder="es: VIP Luxury Club"
                   value={newBooking.clientName}
                   onChange={(e) => setNewBooking({ ...newBooking, clientName: e.target.value })}
-                  className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
                 />
               </div>
 
@@ -2269,7 +2269,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                     required
                     value={newBooking.startDate}
                     onChange={(e) => setNewBooking({ ...newBooking, startDate: e.target.value })}
-                    className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-slate-300"
+                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-slate-300"
                   />
                 </div>
                 <div>
@@ -2279,7 +2279,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                     required
                     value={newBooking.endDate}
                     onChange={(e) => setNewBooking({ ...newBooking, endDate: e.target.value })}
-                    className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-slate-300"
+                    className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-slate-300"
                   />
                 </div>
               </div>
@@ -2292,7 +2292,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                   min="1"
                   value={newBooking.dailyRate}
                   onChange={(e) => setNewBooking({ ...newBooking, dailyRate: Number(e.target.value) })}
-                  className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white font-mono"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white font-mono"
                 />
               </div>
             </div>
@@ -2301,7 +2301,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
               <button
                 type="button"
                 onClick={() => setShowBookingModal(false)}
-                className="px-4 py-2 bg-slate-900 hover:bg-slate-850 border border-slate-800 text-slate-400 text-xs rounded-xl"
+                className="px-4 py-2 bg-slate-900 hover:bg-slate-800 border border-slate-800 text-slate-400 text-xs rounded-xl"
               >
                 Annulla
               </button>
@@ -2337,7 +2337,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                   placeholder="Nuova password sicura"
                   value={passwordForm.newPassword}
                   onChange={(e) => setPasswordForm({ ...passwordForm, newPassword: e.target.value })}
-                  className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
                 />
               </div>
 
@@ -2349,7 +2349,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                   placeholder="Ripeti la stessa password"
                   value={passwordForm.confirmPassword}
                   onChange={(e) => setPasswordForm({ ...passwordForm, confirmPassword: e.target.value })}
-                  className="w-full bg-slate-950 border border-slate-850 rounded-lg px-3 py-2 text-xs text-white"
+                  className="w-full bg-slate-950 border border-slate-800 rounded-lg px-3 py-2 text-xs text-white"
                 />
               </div>
             </div>
@@ -2364,7 +2364,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
               <button
                 type="button"
                 onClick={() => setShowPasswordModal(false)}
-                className="px-4 py-2 bg-slate-900 border border-slate-850 text-slate-450 text-xs rounded-xl"
+                className="px-4 py-2 bg-slate-900 border border-slate-800 text-slate-450 text-xs rounded-xl"
               >
                 Annulla
               </button>
@@ -2393,15 +2393,15 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
             </p>
 
             <div className="space-y-2.5 font-mono text-xs">
-              <div className="flex justify-between py-1 border-b border-slate-850">
+              <div className="flex justify-between py-1 border-b border-slate-800">
                 <span className="text-slate-450">Lunedì - Venerdì:</span>
                 <strong className="text-slate-200">09:00 - 13:00 / 14:30 - 18:30</strong>
               </div>
-              <div className="flex justify-between py-1 border-b border-slate-850">
+              <div className="flex justify-between py-1 border-b border-slate-800">
                 <span className="text-slate-450">Sabato:</span>
                 <strong className="text-amber-400">09:00 - 13:00 (Solo Reperibilità)</strong>
               </div>
-              <div className="flex justify-between py-1 border-b border-slate-850">
+              <div className="flex justify-between py-1 border-b border-slate-800">
                 <span className="text-slate-450">Domenica:</span>
                 <strong className="text-red-400">CHIUSO (Allarmi Centralizzati)</strong>
               </div>
@@ -2410,7 +2410,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
             <div className="pt-3 text-right">
               <button
                 onClick={() => setShowHoursModal(false)}
-                className="px-5 py-2.5 bg-slate-900 border border-slate-850 hover:bg-slate-850 text-slate-300 hover:text-white rounded-xl text-xs font-semibold cursor-pointer transition-colors"
+                className="px-5 py-2.5 bg-slate-900 border border-slate-800 hover:bg-slate-800 text-slate-300 hover:text-white rounded-xl text-xs font-semibold cursor-pointer transition-colors"
               >
                 Ottimo, Chiudi
               </button>
@@ -2570,7 +2570,7 @@ export default function AdminDashboard({ onLogout, onBackToLanding }: AdminDashb
                       className={`px-4 py-2.5 rounded-xl text-xs font-semibold border transition ${
                         newQuotation.status === 'inviato'
                           ? `${ts.bgAccentAlpha} ${ts.textAccent} border-cyan-500`
-                          : 'border-slate-850 text-slate-400 hover:text-white'
+                          : 'border-slate-800 text-slate-400 hover:text-white'
                       }`}
                     >
                       Inviato (Pronto all'invio)

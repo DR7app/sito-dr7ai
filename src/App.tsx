@@ -203,7 +203,7 @@ export default function App() {
               </div>
 
               {/* Ultra clean prominent Apple style Typography */}
-              <h1 className="text-4xl sm:text-5xl md:text-6.5xl font-bold tracking-tight text-[#111111] leading-[1.08] max-w-3xl mx-auto font-sans">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold tracking-tight text-[#111111] leading-[1.08] max-w-3xl mx-auto font-sans">
                 Gestisci noleggi, contratti e flotta.<br />Con assoluta precisione.
               </h1>
 
@@ -406,7 +406,7 @@ export default function App() {
                             <div className="md:col-span-8 space-y-3.5">
                               <h4 className="text-[10px] font-semibold text-slate-400 uppercase tracking-widest font-mono">Contratti Recenti Autonoleggio / NCC</h4>
                               
-                              <div className="bg-[#050508] rounded-xl border border-slate-850 overflow-hidden text-xs">
+                              <div className="bg-[#050508] rounded-xl border border-slate-800 overflow-hidden text-xs">
                                 <div className="p-3.5 flex items-center justify-between border-b border-slate-800/60 hover:bg-slate-900/10 transition">
                                   <div className="flex items-center gap-3">
                                     <div className="p-1.5 bg-emerald-500/10 text-[#00C884] rounded-md font-mono text-[11px]">🏎️</div>
@@ -464,7 +464,7 @@ export default function App() {
 
                                 <div className="p-3 bg-amber-500/10 border border-amber-500/20 rounded-xl text-xs space-y-1">
                                   <div className="flex items-center gap-1.5 text-amber-400 font-bold font-mono text-[9px]">
-                                    <AlertTriangle className="w-3 h-3 shrink-0" /> CONTROLLO VEICCOLO
+                                    <AlertTriangle className="w-3 h-3 shrink-0" /> CONTROLLO VEICOLO
                                   </div>
                                   <p className="font-semibold text-white text-[11px]">Lavaggio Mercedes Classe V</p>
                                   <p className="text-[10px] text-slate-400">Pianificato per rientro prima del transfer NCC.</p>
@@ -480,7 +480,7 @@ export default function App() {
                             initial={{ opacity: 0, y: 4 }} 
                             animate={{ opacity: 1, y: 0 }} 
                             exit={{ opacity: 0, y: -4 }}
-                            className="bg-[#050508] rounded-xl border border-slate-850 p-5 space-y-4 text-xs text-left"
+                            className="bg-[#050508] rounded-xl border border-slate-800 p-5 space-y-4 text-xs text-left"
                           >
                             <div className="flex items-center justify-between text-[11px] text-slate-400 pb-3 border-b border-slate-800">
                               <span className="font-semibold font-mono">planning prenotazioni unificato</span>
@@ -501,7 +501,7 @@ export default function App() {
                                   <tr className="hover:bg-slate-900/10">
                                     <td className="py-2.5 font-semibold text-white">Ferrari F8 Tributo</td>
                                     <td className="py-2.5 text-slate-300">VIP Luxury Club</td>
-                                    <td className="py-2.5 text-slate-350">12 Giu - 15 Giu</td>
+                                    <td className="py-2.5 text-slate-400">12 Giu - 15 Giu</td>
                                     <td className="py-2.5">
                                       <span className="bg-amber-500/10 text-amber-400 text-[9px] px-2 py-0.5 rounded font-semibold font-mono">Attesa Consegna</span>
                                     </td>
@@ -510,7 +510,7 @@ export default function App() {
                                   <tr className="hover:bg-slate-900/10">
                                     <td className="py-2.5 font-semibold text-white">Mercedes V-Class Limo</td>
                                     <td className="py-2.5 text-slate-300">Emirates Travel (NCC)</td>
-                                    <td className="py-2.5 text-slate-350">06 Giu - 10 Giu</td>
+                                    <td className="py-2.5 text-slate-400">06 Giu - 10 Giu</td>
                                     <td className="py-2.5">
                                       <span className="bg-[#00C884]/20 text-[#00C884] text-[9px] px-2 py-0.5 rounded font-semibold font-mono">Attivo in Corso</span>
                                     </td>
@@ -519,7 +519,7 @@ export default function App() {
                                   <tr className="hover:bg-slate-900/10">
                                     <td className="py-2.5 font-semibold text-white">Porsche 911 S</td>
                                     <td className="py-2.5 text-slate-300">Klaus G. (Frankfurt)</td>
-                                    <td className="py-2.5 text-slate-350">03 Giu - 06 Giu</td>
+                                    <td className="py-2.5 text-slate-400">03 Giu - 06 Giu</td>
                                     <td className="py-2.5">
                                       <span className="bg-slate-800 text-slate-400 text-[9px] px-2 py-0.5 rounded font-semibold font-mono">Chiuso Rientrato</span>
                                     </td>
@@ -564,7 +564,7 @@ export default function App() {
                                   <h4 className="font-semibold text-white text-[13px]">Mercedes Classe V</h4>
                                   <p className="text-[10px] text-slate-500">Targa: GD442LK • NCC</p>
                                 </div>
-                                <span className="bg-emerald-400/20 text-[#00C884] px-1.5 py-0.2 rounded font-mono text-[9px] font-semibold">IN TRADA</span>
+                                <span className="bg-emerald-400/20 text-[#00C884] px-1.5 py-0.2 rounded font-mono text-[9px] font-semibold">IN STRADA</span>
                               </div>
                               <div className="space-y-1.5">
                                 <div className="flex justify-between text-[10px] text-slate-400 font-mono">
@@ -604,7 +604,7 @@ export default function App() {
                             initial={{ opacity: 0, y: 4 }} 
                             animate={{ opacity: 1, y: 0 }} 
                             exit={{ opacity: 0, y: -4 }}
-                            className="bg-[#050508] rounded-xl border border-slate-850 p-5 space-y-3.5 text-xs text-left"
+                            className="bg-[#050508] rounded-xl border border-slate-800 p-5 space-y-3.5 text-xs text-left"
                           >
                             <h4 className="text-slate-400 font-semibold font-mono text-[10px] uppercase">Cauzioni e fatture inviate sdi</h4>
                             <div className="space-y-2.5">
@@ -637,7 +637,7 @@ export default function App() {
                     </div>
 
                     {/* Footer log entry inside mockup */}
-                    <div className="border-t border-slate-850/80 pt-4.5 mt-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-500 font-mono">
+                    <div className="border-t border-slate-800/80 pt-4.5 mt-5 flex flex-col sm:flex-row items-center justify-between gap-4 text-[10px] text-slate-500 font-mono">
                       <span>Stato Operativo: 100% Attivo // dr7ai.com secure engine // Nessun Errore</span>
                       <button 
                         onClick={openPortal} 
@@ -681,7 +681,7 @@ export default function App() {
               
               <div className="text-left max-w-3xl space-y-4">
                 <span className="text-[#6E6E73] font-semibold text-xs uppercase tracking-wider font-mono">Il paradosso della mobilità</span>
-                <h2 className="text-3xl sm:text-4.5xl font-bold tracking-tight text-[#111111] font-sans leading-tight">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111111] font-sans leading-tight">
                   Quando gli strumenti sono scollegati,<br />l'efficienza operativa crolla.
                 </h2>
                 <p className="text-[#6E6E73] text-sm sm:text-base font-light leading-relaxed font-sans max-w-2xl">
@@ -750,9 +750,9 @@ export default function App() {
             <div className="max-w-6xl mx-auto px-6 lg:px-12 space-y-16">
               
               {/* Apple-style typography statement */}
-              <div className="text-left max-w-2.5xl space-y-3">
+              <div className="text-left max-w-2xl space-y-3">
                 <span className="text-[#00C884] font-semibold text-xs uppercase tracking-wider font-mono">Dettagli della piattaforma</span>
-                <h2 className="text-3xl sm:text-4.5xl font-bold tracking-tight text-[#111111] font-sans">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111111] font-sans">
                   Ogni funzione è pensata per semplificare.
                 </h2>
                 <p className="text-[#6E6E73] text-sm leading-relaxed max-w-2xl font-sans font-light">
@@ -779,7 +779,7 @@ export default function App() {
                   </div>
                   <h4 className="text-base font-semibold text-[#111111]">CRM & Anagrafica Clienti</h4>
                   <p className="text-xs text-[#6E6E73] leading-relaxed font-sans">
-                    Archivio unificato con digitalizzazione diretta dei documenti d'identità, patenti di guida e gestione automatizzata di allert e liste nore aziendali per tutelare i mezzi.
+                    Archivio unificato con digitalizzazione diretta dei documenti d'identità, patenti di guida e gestione automatizzata di allert e liste nere aziendali per tutelare i mezzi.
                   </p>
                 </div>
 
@@ -834,7 +834,7 @@ export default function App() {
               
               <div className="text-left max-w-3xl space-y-3">
                 <span className="text-[#6E6E73] font-semibold text-xs uppercase tracking-wider font-mono">Segmenti di Mercato</span>
-                <h2 className="text-3xl sm:text-4.5xl font-bold tracking-tight text-[#111111] font-sans">
+                <h2 className="text-3xl sm:text-4xl font-bold tracking-tight text-[#111111] font-sans">
                   Adatto a professionisti della mobilità.
                 </h2>
                 <p className="text-[#6E6E73] text-sm leading-relaxed max-w-xl font-sans font-light">
@@ -878,7 +878,7 @@ export default function App() {
                 </div>
 
                 <div className="bg-white p-8 rounded-2xl border border-[#E5E7EB]/50 space-y-3">
-                  <span className="text-[#00C884] font-bold text-xs uppercase tracking-wider font-mono block">AREA CONSIDERAION</span>
+                  <span className="text-[#00C884] font-bold text-xs uppercase tracking-wider font-mono block">AREA NETWORK</span>
                   <h4 className="font-bold text-[#111111] text-base">Broker & Aggregatori</h4>
                   <p className="text-xs text-[#6E6E73] leading-relaxed font-sans">
                     Ricezione e consolidamento automatico delle pendenze da portali esterni, gestione commissioni agenzie terze e fluidità dei dati anagrafici.
@@ -945,7 +945,7 @@ export default function App() {
                 Richiedi una presentazione
               </span>
 
-              <h2 className="text-3xl sm:text-4.5xl font-bold text-white tracking-tight leading-tight max-w-2.5xl mx-auto font-sans">
+              <h2 className="text-3xl sm:text-4xl font-bold text-white tracking-tight leading-tight max-w-2xl mx-auto font-sans">
                 Vuoi vedere DR7 AI applicato alla tua flotta?
               </h2>
 
